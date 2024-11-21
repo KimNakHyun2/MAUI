@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Icecream.App.ViewModels"
+             xmlns:models="clr-namespace:Icecream.App.Models"
+             xmlns:dto="clr-namespace:Icecream.Shared.Dtos;assembly=Icecream.Shared"
+             x:DataType="vm:OrderViewModel"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="Icecream.App.Pages.MyOrdersPage"
+             Title="My Orders"
+             BackgroundColor="#EEE">
+    <RefreshView Command="{Binding LoadOrderCommand}" IsRefreshing="{Binding IsBusy}">
+        <Grid>
+            <ScrollView Padding="10">
+                <CollectionView ItemsSource="{Binding Orders}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="dto:OrderDto">
+                            <Border
+                                StrokeShape="RoundRectangle 10"
+                                Background="White"
+                                Margin="0, 4"
+                                Padding="10">
+                                <Grid ColumnDefinitions="*, Auto, Auto"
+                                      ColumnSpacing="10">
+                                    <Grid Grid.Column="0" RowDefinitions="*, Auto">
+                                        <Label Grid.Row ="0" 
+                                               Text="{Binding Id, StringFormat='Order Id: {0}'}"
+                                               FontSize="15"
+                                               TextColor="DeepPink"/>
+                                        <Label Grid.Row="1"
+                                               Text="{Binding ItemCountDisplay}"/>
+                                    </Grid>
+
+                                    <Grid Grid.Column="1" RowDefinitions="*, *"
+                                          RowSpacing="2">
+                                        <Label Grid.Row ="0" 
+                                               Text="{Binding TotalPrice, StringFormat='{0:C}'}"
+                                               FontSize="15"
+                                               TextColor="DeepPink"
+                                               FontAttributes="Bold"
+                                               HorizontalOptions="End"/>
+                                        <Label Grid.Row="1"
+                                               FontSize="13"
+                                               Text="{Binding OrderAt, StringFormat='{0: MMM dd yyyy, hh:mm'}"/>
+                                     </Grid>
+
+                                    <Image Grid.Column="2"
+                                           Source="right_arrow"
+                                           VerticalOptions="Center">
+                                        <Image.Behaviors>
+                                            <toolkit:IconTintColorBehavior TintColor="DeepPink"/>
+                                        </Image.Behaviors>
+                                    </Image>
+                                </Grid>
+
+                                <Border.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Source={x:RelativeSource AncestorType={x:Type vm:OrderViewModel}}, Path=GoToOrderDetailsPageCommand}"
+                                                          CommandParameter="{Binding Id}"/>
+                                </Border.GestureRecognizers>
+                            </Border>
+                                
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </ScrollView>
+            <ActivityIndicator IsRunning="{Binding IsBusy}"/>
+        </Grid>
+    </RefreshView>
+</ContentPage>

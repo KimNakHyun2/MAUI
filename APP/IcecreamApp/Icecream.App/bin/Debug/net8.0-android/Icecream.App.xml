@@ -1,0 +1,515 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Icecream.App</name>
+    </assembly>
+    <members>
+        <member name="T:Icecream.App.Models.CartItem">
+            <inheritdoc/>
+        </member>
+        <member name="P:Icecream.App.Models.CartItem.Quantity">
+            <inheritdoc cref="F:Icecream.App.Models.CartItem._quantity"/>
+        </member>
+        <member name="T:Icecream.App.Models.IcecreamOption">
+            <inheritdoc/>
+        </member>
+        <member name="P:Icecream.App.Models.IcecreamOption.IsSelected">
+            <inheritdoc cref="F:Icecream.App.Models.IcecreamOption._isSelected"/>
+        </member>
+        <member name="T:Icecream.App.ViewModels.AuthViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:Icecream.App.ViewModels.AuthViewModel.Name">
+            <inheritdoc cref="F:Icecream.App.ViewModels.AuthViewModel._name"/>
+        </member>
+        <member name="P:Icecream.App.ViewModels.AuthViewModel.Email">
+            <inheritdoc cref="F:Icecream.App.ViewModels.AuthViewModel._email"/>
+        </member>
+        <member name="P:Icecream.App.ViewModels.AuthViewModel.Password">
+            <inheritdoc cref="F:Icecream.App.ViewModels.AuthViewModel._password"/>
+        </member>
+        <member name="P:Icecream.App.ViewModels.AuthViewModel.Address">
+            <inheritdoc cref="F:Icecream.App.ViewModels.AuthViewModel._address"/>
+        </member>
+        <member name="F:Icecream.App.ViewModels.AuthViewModel.signupCommand">
+            <summary>The backing field for <see cref="P:Icecream.App.ViewModels.AuthViewModel.SignupCommand"/>.</summary>
+        </member>
+        <member name="P:Icecream.App.ViewModels.AuthViewModel.SignupCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Icecream.App.ViewModels.AuthViewModel.SignupAsync"/>.</summary>
+        </member>
+        <member name="F:Icecream.App.ViewModels.AuthViewModel.signinCommand">
+            <summary>The backing field for <see cref="P:Icecream.App.ViewModels.AuthViewModel.SigninCommand"/>.</summary>
+        </member>
+        <member name="P:Icecream.App.ViewModels.AuthViewModel.SigninCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Icecream.App.ViewModels.AuthViewModel.SigninAsync"/>.</summary>
+        </member>
+        <member name="T:Icecream.App.ViewModels.BaseViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:Icecream.App.ViewModels.BaseViewModel.IsBusy">
+            <inheritdoc cref="F:Icecream.App.ViewModels.BaseViewModel._isBusy"/>
+        </member>
+        <member name="T:Icecream.App.ViewModels.CartViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="F:Icecream.App.ViewModels.CartViewModel.clearCartCommand">
+            <summary>The backing field for <see cref="P:Icecream.App.ViewModels.CartViewModel.ClearCartCommand"/>.</summary>
+        </member>
+        <member name="P:Icecream.App.ViewModels.CartViewModel.ClearCartCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Icecream.App.ViewModels.CartViewModel.ClearCartAsync"/>.</summary>
+        </member>
+        <member name="F:Icecream.App.ViewModels.CartViewModel.removeCartItemCommand">
+            <summary>The backing field for <see cref="P:Icecream.App.ViewModels.CartViewModel.RemoveCartItemCommand"/>.</summary>
+        </member>
+        <member name="P:Icecream.App.ViewModels.CartViewModel.RemoveCartItemCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:Icecream.App.ViewModels.CartViewModel.RemoveCartItemAsync(System.Int32)"/>.</summary>
+        </member>
+        <member name="F:Icecream.App.ViewModels.CartViewModel.placeOrderCommand">
+            <summary>The backing field for <see cref="P:Icecream.App.ViewModels.CartViewModel.PlaceOrderCommand"/>.</summary>
+        </member>
+        <member name="P:Icecream.App.ViewModels.CartViewModel.PlaceOrderCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Icecream.App.ViewModels.CartViewModel.PlaceOrderAsync"/>.</summary>
+        </member>
+        <member name="T:Icecream.App.ViewModels.DetailsViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:Icecream.App.ViewModels.DetailsViewModel.Icecream">
+            <inheritdoc cref="F:Icecream.App.ViewModels.DetailsViewModel._icecream"/>
+        </member>
+        <member name="P:Icecream.App.ViewModels.DetailsViewModel.Quantity">
+            <inheritdoc cref="F:Icecream.App.ViewModels.DetailsViewModel._quantity"/>
+        </member>
+        <member name="P:Icecream.App.ViewModels.DetailsViewModel.Options">
+            <inheritdoc cref="F:Icecream.App.ViewModels.DetailsViewModel._options"/>
+        </member>
+        <member name="M:Icecream.App.ViewModels.DetailsViewModel.OnIcecreamChanged(Icecream.Shared.Dtos.IcecreamDto)">
+            <summary>Executes the logic for when <see cref="P:Icecream.App.ViewModels.DetailsViewModel.Icecream"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:Icecream.App.ViewModels.DetailsViewModel.Icecream"/> is changed.</remarks>
+        </member>
+        <member name="F:Icecream.App.ViewModels.DetailsViewModel.increaseQuantityCommand">
+            <summary>The backing field for <see cref="P:Icecream.App.ViewModels.DetailsViewModel.IncreaseQuantityCommand"/>.</summary>
+        </member>
+        <member name="P:Icecream.App.ViewModels.DetailsViewModel.IncreaseQuantityCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:Icecream.App.ViewModels.DetailsViewModel.IncreaseQuantity"/>.</summary>
+        </member>
+        <member name="F:Icecream.App.ViewModels.DetailsViewModel.decreaseQuantityCommand">
+            <summary>The backing field for <see cref="P:Icecream.App.ViewModels.DetailsViewModel.DecreaseQuantityCommand"/>.</summary>
+        </member>
+        <member name="P:Icecream.App.ViewModels.DetailsViewModel.DecreaseQuantityCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:Icecream.App.ViewModels.DetailsViewModel.DecreaseQuantity"/>.</summary>
+        </member>
+        <member name="F:Icecream.App.ViewModels.DetailsViewModel.goBackCommand">
+            <summary>The backing field for <see cref="P:Icecream.App.ViewModels.DetailsViewModel.GoBackCommand"/>.</summary>
+        </member>
+        <member name="P:Icecream.App.ViewModels.DetailsViewModel.GoBackCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Icecream.App.ViewModels.DetailsViewModel.GoBackAsync"/>.</summary>
+        </member>
+        <member name="F:Icecream.App.ViewModels.DetailsViewModel.selectOptionCommand">
+            <summary>The backing field for <see cref="P:Icecream.App.ViewModels.DetailsViewModel.SelectOptionCommand"/>.</summary>
+        </member>
+        <member name="P:Icecream.App.ViewModels.DetailsViewModel.SelectOptionCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:Icecream.App.ViewModels.DetailsViewModel.SelectOption(Icecream.App.Models.IcecreamOption)"/>.</summary>
+        </member>
+        <member name="F:Icecream.App.ViewModels.DetailsViewModel.addToCartCommand">
+            <summary>The backing field for <see cref="P:Icecream.App.ViewModels.DetailsViewModel.AddToCartCommand"/>.</summary>
+        </member>
+        <member name="P:Icecream.App.ViewModels.DetailsViewModel.AddToCartCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Icecream.App.ViewModels.DetailsViewModel.AddToCart"/>.</summary>
+        </member>
+        <member name="T:Icecream.App.ViewModels.HomeViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:Icecream.App.ViewModels.HomeViewModel.Icecreams">
+            <inheritdoc cref="F:Icecream.App.ViewModels.HomeViewModel._icecreams"/>
+        </member>
+        <member name="P:Icecream.App.ViewModels.HomeViewModel.UserName">
+            <inheritdoc cref="F:Icecream.App.ViewModels.HomeViewModel._userName"/>
+        </member>
+        <member name="F:Icecream.App.ViewModels.HomeViewModel.goToDetailsPageCommand">
+            <summary>The backing field for <see cref="P:Icecream.App.ViewModels.HomeViewModel.GoToDetailsPageCommand"/>.</summary>
+        </member>
+        <member name="P:Icecream.App.ViewModels.HomeViewModel.GoToDetailsPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:Icecream.App.ViewModels.HomeViewModel.GoToDetailsPageAsync(Icecream.Shared.Dtos.IcecreamDto)"/>.</summary>
+        </member>
+        <member name="T:Icecream.App.ViewModels.OrderDetailViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:Icecream.App.ViewModels.OrderDetailViewModel.OrderId">
+            <inheritdoc cref="F:Icecream.App.ViewModels.OrderDetailViewModel._orderId"/>
+        </member>
+        <member name="P:Icecream.App.ViewModels.OrderDetailViewModel.OrderItems">
+            <inheritdoc cref="F:Icecream.App.ViewModels.OrderDetailViewModel._orderItems"/>
+        </member>
+        <member name="P:Icecream.App.ViewModels.OrderDetailViewModel.Title">
+            <inheritdoc cref="F:Icecream.App.ViewModels.OrderDetailViewModel._title"/>
+        </member>
+        <member name="M:Icecream.App.ViewModels.OrderDetailViewModel.OnOrderIdChanged(System.Int64)">
+            <summary>Executes the logic for when <see cref="P:Icecream.App.ViewModels.OrderDetailViewModel.OrderId"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:Icecream.App.ViewModels.OrderDetailViewModel.OrderId"/> is changed.</remarks>
+        </member>
+        <member name="T:Icecream.App.ViewModels.OrderViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:Icecream.App.ViewModels.OrderViewModel.Orders">
+            <inheritdoc cref="F:Icecream.App.ViewModels.OrderViewModel._orders"/>
+        </member>
+        <member name="F:Icecream.App.ViewModels.OrderViewModel.loadOrderCommand">
+            <summary>The backing field for <see cref="P:Icecream.App.ViewModels.OrderViewModel.LoadOrderCommand"/>.</summary>
+        </member>
+        <member name="P:Icecream.App.ViewModels.OrderViewModel.LoadOrderCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Icecream.App.ViewModels.OrderViewModel.LoadOrderAsync"/>.</summary>
+        </member>
+        <member name="F:Icecream.App.ViewModels.OrderViewModel.goToOrderDetailsPageCommand">
+            <summary>The backing field for <see cref="P:Icecream.App.ViewModels.OrderViewModel.GoToOrderDetailsPageCommand"/>.</summary>
+        </member>
+        <member name="P:Icecream.App.ViewModels.OrderViewModel.GoToOrderDetailsPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:Icecream.App.ViewModels.OrderViewModel.GoToOrderDetailsPageAsync(System.Int64)"/>.</summary>
+        </member>
+        <member name="T:Icecream.App.ViewModels.ProfileViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:Icecream.App.ViewModels.ProfileViewModel.Name">
+            <inheritdoc cref="F:Icecream.App.ViewModels.ProfileViewModel._name"/>
+        </member>
+        <member name="F:Icecream.App.ViewModels.ProfileViewModel.signoutCommand">
+            <summary>The backing field for <see cref="P:Icecream.App.ViewModels.ProfileViewModel.SignoutCommand"/>.</summary>
+        </member>
+        <member name="P:Icecream.App.ViewModels.ProfileViewModel.SignoutCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Icecream.App.ViewModels.ProfileViewModel.SignoutAsync"/>.</summary>
+        </member>
+        <member name="F:Icecream.App.ViewModels.ProfileViewModel.gotoMyOrdersCommand">
+            <summary>The backing field for <see cref="P:Icecream.App.ViewModels.ProfileViewModel.GotoMyOrdersCommand"/>.</summary>
+        </member>
+        <member name="P:Icecream.App.ViewModels.ProfileViewModel.GotoMyOrdersCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Icecream.App.ViewModels.ProfileViewModel.GotoMyOrdersAsync"/>.</summary>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Button.TextColorTo(Microsoft.Maui.Controls.Button,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_DatePicker.TextColorTo(Microsoft.Maui.Controls.DatePicker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Editor.TextColorTo(Microsoft.Maui.Controls.Editor,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Entry.TextColorTo(Microsoft.Maui.Controls.Entry,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_InputView.TextColorTo(Microsoft.Maui.Controls.InputView,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Label.TextColorTo(Microsoft.Maui.Controls.Label,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Picker.TextColorTo(Microsoft.Maui.Controls.Picker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_RadioButton.TextColorTo(Microsoft.Maui.Controls.RadioButton,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_SearchBar.TextColorTo(Microsoft.Maui.Controls.SearchBar,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_TimePicker.TextColorTo(Microsoft.Maui.Controls.TimePicker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Quantity">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Quantity" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TotalPrice">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TotalPrice" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Name">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Name" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CanSignup">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CanSignup" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Email">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Email" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CanSignin">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CanSignin" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Password">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Password" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Address">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Address" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Icecream">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Icecream" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Options">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Options" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Icecreams">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Icecreams" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.UserName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "UserName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.OrderId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "OrderId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.OrderItems">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "OrderItems" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Title">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Title" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Orders">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Orders" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Initials">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Initials" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Quantity">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Quantity" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TotalPrice">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TotalPrice" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Name">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Name" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CanSignup">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CanSignup" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Email">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Email" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CanSignin">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CanSignin" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Password">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Password" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Address">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Address" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Icecream">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Icecream" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Options">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Options" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Icecreams">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Icecreams" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.UserName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "UserName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.OrderId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "OrderId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.OrderItems">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "OrderItems" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Title">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Title" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Orders">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Orders" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Initials">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Initials" generated properties.</summary>
+        </member>
+        <member name="T:Refit.Implementation.Generated">
+            <inheritdoc />
+        </member>
+        <member name="T:Refit.Implementation.Generated.IcecreamAppServicesIAuthApi">
+            <inheritdoc />
+        </member>
+        <member name="P:Refit.Implementation.Generated.IcecreamAppServicesIAuthApi.Client">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.IcecreamAppServicesIAuthApi.#ctor(System.Net.Http.HttpClient,Refit.IRequestBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.IcecreamAppServicesIAuthApi.SignupAsync(Icecream.Shared.Dtos.SignupRequestDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.IcecreamAppServicesIAuthApi.SigninAsync(Icecream.Shared.Dtos.SigninRequestDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.IcecreamAppServicesIAuthApi.Icecream#App#Services#IAuthApi#SignupAsync(Icecream.Shared.Dtos.SignupRequestDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.IcecreamAppServicesIAuthApi.Icecream#App#Services#IAuthApi#SigninAsync(Icecream.Shared.Dtos.SigninRequestDto)">
+            <inheritdoc />
+        </member>
+        <member name="T:Refit.Implementation.Generated.IcecreamAppServicesIIcecreamApi">
+            <inheritdoc />
+        </member>
+        <member name="P:Refit.Implementation.Generated.IcecreamAppServicesIIcecreamApi.Client">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.IcecreamAppServicesIIcecreamApi.#ctor(System.Net.Http.HttpClient,Refit.IRequestBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.IcecreamAppServicesIIcecreamApi.GetIcecreamsAsync">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.IcecreamAppServicesIIcecreamApi.Icecream#App#Services#IIcecreamApi#GetIcecreamsAsync">
+            <inheritdoc />
+        </member>
+        <member name="T:Refit.Implementation.Generated.IcecreamAppServicesIOrderApi">
+            <inheritdoc />
+        </member>
+        <member name="P:Refit.Implementation.Generated.IcecreamAppServicesIOrderApi.Client">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.IcecreamAppServicesIOrderApi.#ctor(System.Net.Http.HttpClient,Refit.IRequestBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.IcecreamAppServicesIOrderApi.PlaceOrderAsync(Icecream.Shared.Dtos.OrderPlaceDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.IcecreamAppServicesIOrderApi.GetMyOrdersAsync">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.IcecreamAppServicesIOrderApi.GetUserOrderItemsAsync(System.Int64)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.IcecreamAppServicesIOrderApi.Icecream#App#Services#IOrderApi#PlaceOrderAsync(Icecream.Shared.Dtos.OrderPlaceDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.IcecreamAppServicesIOrderApi.Icecream#App#Services#IOrderApi#GetMyOrdersAsync">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.IcecreamAppServicesIOrderApi.Icecream#App#Services#IOrderApi#GetUserOrderItemsAsync(System.Int64)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

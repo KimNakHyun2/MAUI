@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Icecream.App.ViewModels"
+            xmlns:models="clr-namespace:Icecream.App.Models"
+            xmlns:dto="clr-namespace:Icecream.Shared.Dtos;assembly=Icecream.Shared"
+            x:DataType="vm:CartViewModel"
+            xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="Icecream.App.Pages.CartPage"
+             Title="CartPage"
+             BackgroundColor="#EEE">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Clear Cart" Command="{Binding ClearCartCommand}"/>
+    </ContentPage.ToolbarItems>
+    
+    <Grid Padding="10">
+        <ScrollView Padding="0, 0, 0, 60">
+            <CollectionView ItemsSource="{Binding CartItems}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:CartItem">
+                        <Border StrokeShape="RoundRectangle 10"
+                                Stroke="LightPink"
+                                BackgroundColor="LightPink"
+                                Padding="10">
+                            <Grid ColumnDefinitions="40, *, Auto, 50">
+                                <Label Text="{Binding Quantity}"
+                                       VerticalOptions="Center"
+                                       FontSize="16"
+                                       FontAttributes="Bold"/>
+                                <VerticalStackLayout Grid.Column="1">
+                                    <Label Text="{Binding Name}"
+                                           FontSize="15"
+                                           FontAttributes="Bold"
+                                           TextColor="DeepPink"/>
+                                    <Label FontSize="12">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="{Binding FlavorName}"/>
+                                                <Span Text=", "/>
+                                                <Span Text="{Binding ToppingName}"/>
+                                            </FormattedString>                                            
+                                        </Label.FormattedText>
+                                    </Label>
+                                </VerticalStackLayout>
+                                <Label Grid.Column="2"
+                                       Text="{Binding Price, StringFormat='{0:C}'}"
+                                       FontAttributes="Bold"
+                                       FontSize="15"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="End"/>
+                                <ImageButton Grid.Column="3" Source="trash"
+                                             HeightRequest="24"
+                                             WidthRequest="24"
+                                             VerticalOptions="Center"
+                                             HorizontalOptions="End"
+                                             Command="{Binding Source={x:RelativeSource AncestorType={x:Type vm:CartViewModel}}, Path=RemoveCartItemCommand}"
+                                             CommandParameter="{Binding Id}">
+                                    <ImageButton.Behaviors>
+                                        <toolkit:IconTintColorBehavior TintColor="Maroon"/>
+                                    </ImageButton.Behaviors>
+                                </ImageButton>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </ScrollView>
+        <Button Text="Place Order"
+                VerticalOptions="End"
+                HorizontalOptions="Center"
+                Command="{Binding PlaceOrderCommand}"/>
+        <ActivityIndicator IsRunning="{Binding IsBusy}"/>
+    </Grid>
+</ContentPage>

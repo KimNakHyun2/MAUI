@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Icecream.App.Pages.OrderDetailPage"
+             xmlns:vm="clr-namespace:Icecream.App.ViewModels"
+             xmlns:models="clr-namespace:Icecream.App.Models"
+             xmlns:dto="clr-namespace:Icecream.Shared.Dtos;assembly=Icecream.Shared"
+             x:DataType="vm:OrderDetailViewModel"
+             Title="{Binding Title}"
+             BackgroundColor="#EEE">
+    <Grid>
+        <ScrollView Padding="10">
+            <CollectionView ItemsSource="{Binding OrderItems}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="dto:OrderItemDto">
+                        <StackLayout BackgroundColor="DeepPink"
+                                     Padding="0,0,0,1"
+                                     Margin="0, 5">
+                            <StackLayout BackgroundColor="White"
+                                         Padding="10">
+                                <Grid ColumnDefinitions="40, *, Auto">
+                                    <Label Grid.Column="0"
+                                            Text="{Binding Quantity}"
+                                            VerticalOptions="Center"
+                                           FontSize="16"
+                                           FontAttributes="Bold"/>
+                                    <VerticalStackLayout>
+                                        <Label Text="{Binding Name}"
+                                               FontSize="15"
+                                               TextColor="DeepPink"/>
+                                        <Label FontSize="12">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="{Binding Flavor}" TextColor="#333"/>
+                                                    <Span Text=", "/>
+                                                    <Span Text="{Binding Topping}" TextColor="#333"/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+                                    </VerticalStackLayout>
+                                    <Label Grid.Column="2"
+                                           Text="{Binding TotalPrice, StringFormat='{0:C}'}" 
+                                           VerticalOptions="Center"
+                                           FontSize="15"
+                                           FontAttributes="Bold"/>
+                                </Grid>
+                            </StackLayout>                            
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </ScrollView>
+    </Grid>
+</ContentPage>

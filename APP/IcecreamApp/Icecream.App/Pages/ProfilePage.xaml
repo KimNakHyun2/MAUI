@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Icecream.App.ViewModels"
+            xmlns:models="clr-namespace:Icecream.App.Models"
+            xmlns:dto="clr-namespace:Icecream.Shared.Dtos;assembly=Icecream.Shared"
+            x:DataType="vm:ProfileViewModel"
+             x:Class="Icecream.App.Pages.ProfilePage"
+             Title="My Profile">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="MenuLbl" TargetType="Label" >
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="TextColor" Value="DeepPink"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid RowDefinitions="Auto, *, Auto" 
+          Padding="15, 25,15,15">
+        <HorizontalStackLayout Grid.Row="0" 
+                               Spacing="15"
+                               HorizontalOptions="Center">
+            <Border StrokeShape="RoundRectangle 25"
+                    HeightRequest="50"
+                    WidthRequest="50"
+                    BackgroundColor="DeepPink">
+                <Label Text="{Binding Initials}"
+                       TextColor="White"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       FontAttributes="Bold"
+                       FontSize="25"/>
+            </Border>
+            <Label Text="{Binding Name}"
+                   FontSize="25"
+                   FontAttributes="Bold"
+                   VerticalOptions="Center"
+                   TextColor="DeepPink"/>
+        </HorizontalStackLayout>
+        <VerticalStackLayout Grid.Row="1" VerticalOptions="Center">
+            <Label Style="{x:StaticResource MenuLbl}" Text="My Orders">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding GotoMyOrdersCommand}"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <BoxView HeightRequest="1" Color="Pink" Margin="0,10"/>
+            <Label Style="{x:StaticResource MenuLbl}" Text="Change Password">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding ChangePasswordCommand}"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <BoxView HeightRequest="1" Color="Pink" Margin="0,10"/>
+        </VerticalStackLayout>
+        <Button
+            Grid.Row="2"
+            Padding="0"
+            FontSize="15"
+            HeightRequest="30"
+            Text="Signout"
+            WidthRequest="120"
+            Command="{Binding SignoutCommand}"/>
+    </Grid>
+</ContentPage>
