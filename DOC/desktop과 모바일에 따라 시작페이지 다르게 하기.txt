@@ -1,0 +1,21 @@
+<!-- appshell.xml에 수정한다. 
+ContentTemplate="{OnIdiom Desktop={DataTemplate desktop:DesktopHomePage}, Phone={DataTemplate local:MainPage}}"
+-->
+
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="DemoEcommerce.Client.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:DemoEcommerce.Client"
+    xmlns:desktop="clr-namespace:DemoEcommerce.Client.Views.Desktop"
+    Shell.FlyoutBehavior="Disabled"
+    Title="DemoEcommerce.Client">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{OnIdiom Desktop={DataTemplate desktop:DesktopHomePage}, Phone={DataTemplate local:MainPage}}"
+        Route="MainPage" />
+
+</Shell>

@@ -1,0 +1,17 @@
+
+
+
+<!-- 
+1. Syncfusion.Maui.Core 패키지 추가
+2. MauiProgram.cs 에 .ConfigureSyncfusionCore() 추가
+3. input사용하기
+    xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core" 추가
+	
+    https://help.syncfusion.com/maui/combobox/getting-started	
+	https://help.syncfusion.com/maui/textinputlayout/getting-started 참조.
+-->
+
+
+ builder
+     .UseMauiApp<App>()
+     .ConfigureSyncfusionCore()
